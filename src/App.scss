@@ -65,3 +65,19 @@
     }
   }
 }
+.news-portion {
+  margin: 4rem 3rem;
+  .nav-pills {
+    a.nav-link {
+      color: black;
+    }
+    a.nav-link.active {
+      background-color: rgb(209, 138, 240);
+    }
+    a.nav-link.disabled {
+      color: grey;
+    }
+  }
+}
+
+
