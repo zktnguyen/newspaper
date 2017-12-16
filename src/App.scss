@@ -39,10 +39,29 @@
   }
 }
 
+.search-bar {
+  margin: 20px 40px 20px 0;
+  text-align: center;
+}
+
 .nav-title {
   font-size: 2rem;
 }
 
 .nav-right {
   float: right;
+}
+
+.home-search {
+  margin: 3em auto;
+  h2 {
+    font-weight: bold;
+    line-height: 1;
+    padding-left: .41rem;    
+    small {
+      padding-left: .21rem;
+      line-height: 1;
+      font-size: 1rem;
+    }
+  }
 }
