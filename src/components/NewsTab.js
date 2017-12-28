@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-// const NewsTab = ({ topic, href }) => (
-
-// );
-
 class NewsTab extends Component {
   showNews = () => console.log(`showing news for ${this.props.topic}`);
 
@@ -22,12 +18,8 @@ class NewsTab extends Component {
   }
 }
 
-NewsTab.defaultProps = {
-  topic: 'New Tab'
-};
-
 NewsTab.propTypes = {
-  topic: PropTypes.string
+  topic: PropTypes.string.isRequired
 };
 
 export default NewsTab;
