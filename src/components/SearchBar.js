@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { getNews } from '../actions/news';
 
 class SearchBar extends Component {
   constructor(props) {
@@ -12,7 +16,8 @@ class SearchBar extends Component {
     this.setState({ query });
   }
 
-  addTab = () => "stupid";
+  addTab = () => this.state.query ? this.props.getNews(this.state.query) 
+  : this.setState({ query: '' });
 
   render() {
     return (
@@ -34,4 +39,13 @@ class SearchBar extends Component {
   }
 }
 
-export default SearchBar;
+SearchBar.propTypes = {
+  getNews: PropTypes.func.isRequired
+};
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ getNews }, dispatch);
+}
+
+
+export default connect(null, mapDispatchToProps)(SearchBar);

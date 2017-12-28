@@ -68,13 +68,14 @@
 .news-portion {
   margin: 4rem 3rem;
   .nav-pills {
-    a.nav-link {
+    button.btn-link {
+      text-decoration: none;
       color: black;
     }
-    a.nav-link.active {
-      background-color: rgb(209, 138, 240);
+    button.btn-link:active {
+      color: black;
     }
-    a.nav-link.disabled {
+    button.btn-link:hover {
       color: grey;
     }
   }
