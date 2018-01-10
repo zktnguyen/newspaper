@@ -10,7 +10,7 @@ const links = [
   { title: 'link#2', href: '/', isLogo: false }
 ];
 
-const tabs = ['blockchain'];
+const tabs = ['blockchain', 'dogs'];
 
 const App = () => (
   <div>

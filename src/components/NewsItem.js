@@ -24,12 +24,13 @@ const NewsItem = ({ photo, description,
 NewsItem.defaultProps = {
   photo: 'http://via.placeholder.com/350x150',
   author: 'Unknown',
-  date: 'Unknown date'
+  date: 'Unknown date',
+  description: 'No description'
 }
 
 NewsItem.propTypes = {
   photo: PropTypes.string,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.string,
   title: PropTypes.string.isRequired,
   author: PropTypes.string,
   url: PropTypes.string.isRequired,

@@ -8,7 +8,7 @@ import NewsItem from './NewsItem';
 
 class NewsList extends Component {
   componentDidMount() {
-    if (!this.props.news.length) {
+    if (this.props.news.length <= 0) {
       this.props.getNews(this.props.query);
     }
   }
@@ -29,7 +29,7 @@ class NewsList extends Component {
       );
     }
     return (
-      <ul name={query}>
+      <ul name={query} className="news-list">
         {!!newsList ? newsList : 'Rendering'}
       </ul>
     )
